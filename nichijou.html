@@ -4,15 +4,30 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <style>
+    	.player {
+    		position: relative;
+    		z-index: -1;
+    		width: 100%;
+    		height: 100%;
+    	}
+    </style>
+	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
 </head>
 <body>
 	<div class="v-bg">
-		<a id="bgndVideo" class="player" data-property="{videoULR:'https://www.youtube.com/watch?v=vElbh2Ox1dA',containment:'body',autoPlay:true, mute:true, startAt:0, opacity:1}"></a>
+		<a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=vElbh2Ox1dA',containment:'body',autoPlay:true, mute:true, startAt:0, opacity:1}"></a>
 	</div>
+	<script type="text/javascript">
+		jQuery(function(){
+    		jQuery(".player").mb_YTPlayer();
+  		});
+	</script>
 </body>
 </html>
